@@ -19,7 +19,7 @@ public class Product {
         setProdId(prodId);
         setProdName(prodName);
         setUnitCost(unitCost);
-        setDiscountStrategy(discount);
+        setDiscount(discount);
     }
     
     
