@@ -10,14 +10,37 @@ package yc.discountstrategy;
  * @author ycheema
  */
 public class Register {
-    public void startNewSale(){
+    private Receipt receipt;
+    private String storeName;
+    
+    public final void startNewSale(String custId, DatabaseStrategy db){
+        receipt = new Receipt(custId,db);
         
     }
-    public void endSale(){
+    public final void endSale(){
         
         
     }
-    public void addItemToSale(){
+    public final void addItemToSale(){
         
     }
+
+    public final Receipt getReceipt() {
+        return receipt;
+    }
+
+    public final void setReceipt(Receipt receipt) {
+        //Need validation
+        this.receipt = receipt;
+    }
+
+    public final String getStoreName() {
+        return storeName;
+    }
+
+    public final void setStoreName(String storeName) {
+        //Need Validation
+        this.storeName = storeName;
+    }
+    
 }

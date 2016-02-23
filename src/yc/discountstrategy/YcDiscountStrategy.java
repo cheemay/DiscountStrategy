@@ -17,11 +17,14 @@ public class YcDiscountStrategy {
     public static void main(String[] args) {
         // TODO code application logic here
         //KLUDGE: do configuration here
+        DatabaseStrategy db = new FakeDatabase();
         
         
         
         
         //Start talking to objects
+        Register register = new Register();
+        register.startNewSale("100", db);
     }
     
 }

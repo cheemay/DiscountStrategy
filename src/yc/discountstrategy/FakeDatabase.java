@@ -9,7 +9,7 @@ package yc.discountstrategy;
  *
  * @author ycheema
  */
-public class FakeDatabase {
+public class FakeDatabase implements DatabaseStrategy {
     //private Customer [] customers = new Customer [3];
     
     private Customer [] customers = {
@@ -24,6 +24,7 @@ public class FakeDatabase {
         new Product("22", "Women's Blouse", 49.95 , new FlatAmtDiscount(5.00)),
         new Product("33", "Men's Black Belt" , 39.95, new NoDiscount())
     };
+    @Override
     public final Product findProductsById(String prodId){
         Product product = null;
         for(Product p : products) {
@@ -37,6 +38,7 @@ public class FakeDatabase {
         
     
     }
+    @Override
     public final Customer findCustomrById(String custId){
         //Needs validation
         Customer customer = null;
