@@ -9,7 +9,7 @@ package yc.discountstrategy;
  *
  * @author Dell
  */
-public class MessageConsoleOutput implements MessageOutputStrategy{
+public class ConsoleOutput implements PrintOutputStrategy{
 
     @Override
     public void setPrintReceipt(Receipt receipt) {

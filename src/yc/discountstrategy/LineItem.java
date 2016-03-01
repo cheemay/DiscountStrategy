@@ -18,7 +18,13 @@ public class LineItem {
         this.qty = qty;
         setProduct(db.findProductsById(prodId));
     }
-    
+    public final double getTotalPrice(){
+        return qty * product.getUnitCost();
+        
+    }
+    public final double getTotalDiscount(){
+        return product.getDiscount().getDiscountAmt(qty, product.getUnitCost());
+    }
     
 
     public final Product getProduct() {
@@ -36,6 +42,9 @@ public class LineItem {
 
     public final void setQty(int qty) {
         //Need validation
+        if (qty == 0){
+            System.out.println("Error:qty should be greater than zero");
+        }
         this.qty = qty;
     }
     

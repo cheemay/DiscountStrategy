@@ -9,7 +9,7 @@ package yc.discountstrategy;
  *
  * @author Dell
  */
-public interface MessageOutputStrategy {
+public interface PrintOutputStrategy {
     public abstract void setPrintReceipt(Receipt receipt);
     
 }

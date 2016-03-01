@@ -67,23 +67,23 @@ public class Receipt {
         return lineItem;
     }
 
-    public void setLineItem(LineItem[] lineItem) {
+    public final void setLineItem(LineItem[] lineItem) {
         this.lineItem = lineItem;
     }
 
-    public Date getDate() {
+    public final Date getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public final void setDate(Date date) {
         this.date = date;
     }
 
-    public double getTotal() {
+    public final double getTotal() {
         return total;
     }
 
-    public void setTotal(double total) {
+    public final void setTotal(double total) {
         this.total = total;
     }
     
