@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package yc.discountstrategy;
-
+import java.util.Calendar;
+import java.util.Date;
 /**
  *
  * @author ycheema
@@ -13,6 +14,9 @@ public class Receipt {
     private DatabaseStrategy db;
     private Customer customer;
     private LineItem[] lineItem;
+    private Date date = Calendar.getInstance().getTime();
+    private double total;
+    
 
     public Receipt(String custid,DatabaseStrategy db) {
         //Needs validation so that why we using set method
@@ -65,6 +69,22 @@ public class Receipt {
 
     public void setLineItem(LineItem[] lineItem) {
         this.lineItem = lineItem;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
     }
     
     
